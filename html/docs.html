@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation</title>
+  <link rel="icon" href="../image/download.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="page-with-footer">
+
+  <div class="nav-trigger"></div>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="team.html">Team</a>
+    <a href="videos.html">Videos</a>
+    <a href="docs.html">Documentation</a>
+    <a href="todo.html">Todo List</a>
+  </nav>
+  <hr>
+
+  <h1>Project Documentation</h1>
+  <p>Here you'll find our written report, source code, and presentation materials.</p>
+
+  <div class="docs-links">
+    <a href="https://drive.google.com/file/d/1tC5uL2MKLqP7bRt73vhOgseqBYhqR4gJ/view?usp=sharing" target="_blank" class="doc-link-button">📄 Project Report</a>
+    <a href="https://www.canva.com/design/DAG5cP99iHQ/nyX6-Q-JnDQlar7iNI_Msw/edit?utm_content=DAG5cP99iHQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="doc-link-button">🎞️ Presentation Slides</a>
+    <a href="https://github.com/blackmudflat/CMPS1134_Final-Project.git" target="_blank" class="github-link-button">💻 GitHub Repository</a>
+  </div>
+
+  <section class="docs-snippets">
+    <h2>App Screenshots</h2>
+    <div class="snippets-gallery">
+      <div class="snippet-card" onclick="openSnippetModal('../image/todolist.png', 'Todo List App', 'Comprehensive task management with dates and priorities')">
+        <img src="../image/todolist.png" alt="Todo List Application">
+        <h3>Todo List App</h3>
+        <p>Comprehensive task management with dates and priorities</p>
+      </div>
+      <div class="snippet-card" onclick="openSnippetModal('../image/focus_1.png', 'Focus App - Timer', 'Pomodoro-style timer for productive work sessions')">
+        <img src="../image/focus_1.png" alt="Focus App - Timer View">
+        <h3>Focus App - Timer</h3>
+        <p>Pomodoro-style timer for productive work sessions</p>
+      </div>
+      <div class="snippet-card" onclick="openSnippetModal('../image/focus_2.png', 'Focus App - Settings', 'Customizable timer settings and timezone options')">
+        <img src="../image/focus_2.png" alt="Focus App - Settings">
+        <h3>Focus App - Settings</h3>
+        <p>Customizable timer settings and timezone options</p>
+      </div>
+      <div class="snippet-card" onclick="openSnippetModal('../image/download.jpeg', 'Project Branding', 'Professional design and visual identity')">
+        <img src="../image/download.jpeg" alt="Project Branding">
+        <h3>Project Branding</h3>
+        <p>Professional design and visual identity</p>
+      </div>
+      <div class="snippet-card" onclick="openSnippetModal('../image/snip1.png', 'App Interface - View 1', 'Key interface component and user interaction flow')">
+        <img src="../image/snip1.png" alt="Application Snippet 1">
+        <h3>App Interface - View 1</h3>
+        <p>Key interface component and user interaction flow</p>
+      </div>
+      <div class="snippet-card" onclick="openSnippetModal('../image/snip2.png', 'App Interface - View 2', 'Enhanced feature showcase and layout design')">
+        <img src="../image/snip2.png" alt="Application Snippet 2">
+        <h3>App Interface - View 2</h3>
+        <p>Enhanced feature showcase and layout design</p>
+      </div>
+      <div class="snippet-card" onclick="openSnippetModal('../image/snip3.png', 'App Interface - View 3', 'Advanced functionality and user experience details')">
+        <img src="../image/snip3.png" alt="Application Snippet 3">
+        <h3>App Interface - View 3</h3>
+        <p>Advanced functionality and user experience details</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Snippet Modal -->
+  <div id="snippetModal" class="snippet-modal" onclick="closeSnippetModal(event)">
+    <button class="snippet-modal-close" onclick="closeSnippetModal()">&times;</button>
+    <div class="snippet-modal-content">
+      <img id="snippetModalImage" src="" alt="Snippet View" class="snippet-modal-image">
+      <div class="snippet-modal-info">
+        <h2 id="snippetModalTitle"></h2>
+        <p id="snippetModalDesc"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer class="site-footer">
+    <div class="container-wide footer-inner">
+      <div>
+        <div>© <span id="year"></span> CMPS1134 Project</div>
+        <div class="footer-info">
+          <p>Group 4 FOC Final Project</p>
+          <p>Semester 2025-1</p>
+          <p>University of Belize</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="docs.html">Documentation</a>
+        <a href="team.html">Team</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function openSnippetModal(imageSrc, title, description) {
+      const modal = document.getElementById('snippetModal');
+      document.getElementById('snippetModalImage').src = imageSrc;
+      document.getElementById('snippetModalTitle').textContent = title;
+      document.getElementById('snippetModalDesc').textContent = description;
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeSnippetModal(event) {
+      if (event && event.target.id !== 'snippetModal') return;
+      const modal = document.getElementById('snippetModal');
+      modal.classList.remove('open');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeSnippetModal();
+      }
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
