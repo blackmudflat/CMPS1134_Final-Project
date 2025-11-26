@@ -130,7 +130,7 @@ Add your Google Drive links here:
 
 ---
 
-# 🧠 Core Feature: To-Do List App (todo.html)
+# Core Feature: To-Do List App (todo.html)
 
 ### 🔹 Main Functions
 - Add tasks  
