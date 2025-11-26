@@ -11,7 +11,7 @@ const teamMembers = {
     study: 'Associate in Information Technology',
     interest: 'Cyber Security & Networking',
     specialties: ['Full-Stack', 'Network Security', 'System Administration', 'Web Development'],
-    about: 'Adrian is passionate about cybersecurity and networking. With expertise in full-stack development and network administration, Adrian plays a crucial role in ensuring the security and reliability of our applications.'
+    about: 'Adrian is passionate about cybersecurity and networking. With interest in full-stack development and network administration.His Hobbies include sleeping and eating.'
   },
   andrew: {
     name: 'Andrew Faber',
@@ -122,3 +122,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
